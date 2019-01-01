@@ -5,7 +5,7 @@ public class BankAccount{
 
   public BankAccount(double ibalance, int iaccountid, String ipassword){
     balance = ibalance;
-    accountID = iccountid;
+    accountID = iaccountid;
     password = ipassword;
   }
 
@@ -13,7 +13,26 @@ public class BankAccount{
     return balance;
   }
 
-  public returnID(){
-    return ac
+  public int returnID(){
+    return accountID;
   }
+
+  public String toString(){
+    return "" + accountID + " " + balance;
+  }
+
+  public boolean deposit(double amount){
+    if(amount > 0){
+      balance = balance + amount;
+    }
+    return false;
+  }
+
+  public Boolean withdraw(double amount){
+    if(amount < balance){
+      balance = balance - amount;
+    }
+    return false;
+  }
+
 }
